@@ -99,12 +99,12 @@ router.get('', (req, res, next) => {
         posts: fetchedPosts,
         maxPosts: count
       })
-      .catch(error => {
-        res.status(500).json({
-          message: "Fetching posts failed!"
-        });
-      });
     })
+    .catch(error => {
+      res.status(500).json({
+        message: "Fetching posts failed!"
+      });
+    });
   //console.log('First MiddleWare');
   //next();
 });
