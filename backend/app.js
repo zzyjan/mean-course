@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 
 const postsRoutes = require('./routes/posts');
 const userRoutes = require('./routes/user');
+const fileRoutes = require('./routes/banks')
 
 //test git repo
 //Wf40lmlWaTmQa87H
@@ -32,5 +33,6 @@ app.use((req, res, next) => {
 
 app.use("/api/posts", postsRoutes);
 app.use("/api/user", userRoutes);
+app.use("/api/banks", fileRoutes);
 
 module.exports = app;

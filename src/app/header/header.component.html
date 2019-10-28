@@ -1,20 +1,22 @@
 <mat-toolbar color="primary">
   <span>
-    <a routerLink='/'>MyMessages</a>
+    <a routerLink='/'>财务管理系统</a>
   </span>
   <span class='spacer'></span>
   <ul>
+    <!--
     <li *ngIf="userIsAuthenticated">
       <a routerLink='/create' mat-button routerLinkActive="mat-accent">New Post</a>
     </li>
+    -->
     <li *ngIf="!userIsAuthenticated">
-      <a routerLink='/login' mat-button routerLinkActive="mat-accent">Login</a>
+      <a routerLink='/login' mat-button routerLinkActive="mat-accent">登陆</a>
     </li>
     <li *ngIf="!userIsAuthenticated">
-      <a routerLink='/signup' mat-button routerLinkActive="mat-accent">Signup</a>
+      <a routerLink='/signup' mat-button routerLinkActive="mat-accent">注册</a>
     </li>
     <li *ngIf="userIsAuthenticated">
-      <button mat-button (click)="onLogout()">Logout</button>
+      <button mat-button (click)="onLogout()">登出</button>
     </li>
   </ul>
 </mat-toolbar>

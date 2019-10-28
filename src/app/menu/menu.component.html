@@ -1,0 +1,31 @@
+
+<mat-toolbar color="primary">
+  <button mat-button [matMenuTriggerFor]="reqForm">审批单管理</button>
+  <mat-menu #reqForm="matMenu" yPosition="above">
+    <button mat-menu-item>查询审批单</button>
+    <button mat-menu-item>管理审批单</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="transactionMenu">汇款管理</button>
+  <mat-menu #transactionMenu="matMenu" yPosition="below">
+    <button routerLink='/login' mat-menu-item>汇款查询</button>
+    <button routerLink='/login' mat-menu-item>汇款管理</button>
+  </mat-menu>
+
+
+
+  <button mat-button [matMenuTriggerFor]="bankMenu">银行管理</button>
+  <mat-menu #bankMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/bankControl">网银互联银行</button>
+    <button mat-menu-item routerLink="/icbcControl">工商银行支行</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="hrMenu">人员管理</button>
+  <mat-menu #hrMenu="matMenu" xPosition="after">
+    <!--
+    <button mat-menu-item routerLink="/empInfo">人员信息</button>
+    -->
+    <button mat-menu-item routerLink="/empControl">人员管理</button>
+  </mat-menu>
+</mat-toolbar>
+
