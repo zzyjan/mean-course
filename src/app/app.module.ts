@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 // import {FormsModule} from '@angular/forms';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
-// import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FileSelectDirective } from 'ng2-file-upload';
 
 
@@ -26,6 +26,7 @@ import { IcbcControlComponent } from './system/icbc-control/icbc-control.compone
 // import { EmpControlComponent} from './system/emp-control/emp-control.component';
 import { MatPaginatorIntl } from '@angular/material';
 import { MatPaginatorIntlCro } from './setting/paginatorIntl-module';
+import { FrontPageComponent } from './system/front-page/front-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatPaginatorIntlCro } from './setting/paginatorIntl-module';
     ErrorComponent,
     BankControlComponent,
     // EmpControlComponent,
+    FrontPageComponent,
     FileSelectDirective,
     IcbcControlComponent
   ],
@@ -49,8 +51,8 @@ import { MatPaginatorIntlCro } from './setting/paginatorIntl-module';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
-    DemoMaterialModule
-    // NgxDatatableModule
+    DemoMaterialModule,
+    NgxDatatableModule
   ],
   // let the angular interceptor using custom incerceptor
   providers: [

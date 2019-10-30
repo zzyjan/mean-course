@@ -1,5 +1,5 @@
 
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" *ngIf="userIsAuthenticated">
   <button mat-button [matMenuTriggerFor]="reqForm">审批单管理</button>
   <mat-menu #reqForm="matMenu" yPosition="above">
     <button mat-menu-item>查询审批单</button>

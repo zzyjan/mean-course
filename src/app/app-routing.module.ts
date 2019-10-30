@@ -7,10 +7,11 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AuthGuard } from './posts/auth.guard';
 import { BankControlComponent } from './system/bank-control/bank-control.component';
 import { IcbcControlComponent} from './system/icbc-control/icbc-control.component';
+import { FrontPageComponent } from './system/front-page/front-page.component';
 // import { EmpControlComponent } from './system/emp-control/emp-control.component';
 
 const routes: Routes = [
-  {path: '', component: PostListComponent},
+  {path: '', component: FrontPageComponent},
   {path: 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
   {path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent},
