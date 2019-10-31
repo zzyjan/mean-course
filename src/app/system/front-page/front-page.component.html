@@ -1,13 +1,15 @@
-<div>
-  <ngx-datatable
-    class="material"
-    [headerHeight]="50"
-    [rowHeight]="'auto'"
-    [columnMode]="'force'"
-    [footerHeight]="50"
-    [rows]="rows"
-    [count]="'true'"
-    [limit]="2"
-    [columns]="columns">
-  </ngx-datatable>
+
+<div id="frontPage" style="height: calc(100% - 25px);">
+  <ag-grid-angular
+    #agGrid
+    style="width: 100%; height: 500px;"
+    id="myGrid"
+    class="ag-theme-balham"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    [defaultColDef]="defaultColDef"
+    [pinnedTopRowData]="pinnedTopRowData"
+    [pinnedBottomRowData]="pinnedBottomRowData"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
 </div>

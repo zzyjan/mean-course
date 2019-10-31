@@ -6,6 +6,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { FileSelectDirective } from 'ng2-file-upload';
+import { AgGridModule } from 'ag-grid-angular';
 
 
 
@@ -52,6 +53,7 @@ import { FrontPageComponent } from './system/front-page/front-page.component';
     HttpClientModule,
     AppRoutingModule,
     DemoMaterialModule,
+    AgGridModule.withComponents([]),
     NgxDatatableModule
   ],
   // let the angular interceptor using custom incerceptor
