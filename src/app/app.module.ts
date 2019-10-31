@@ -28,6 +28,7 @@ import { IcbcControlComponent } from './system/icbc-control/icbc-control.compone
 import { MatPaginatorIntl } from '@angular/material';
 import { MatPaginatorIntlCro } from './setting/paginatorIntl-module';
 import { FrontPageComponent } from './system/front-page/front-page.component';
+import {EmployeeComponent} from './hrsetting/employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { FrontPageComponent } from './system/front-page/front-page.component';
     // EmpControlComponent,
     FrontPageComponent,
     FileSelectDirective,
-    IcbcControlComponent
+    IcbcControlComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

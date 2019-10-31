@@ -1,0 +1,25 @@
+<div style="margin-bottom: 5px;">
+  <div>
+    <button (click)="onAddRow()">Add Row</button> <button (click)="onInsertRowAt2()">Insert Row @ 2</button>
+    <button (click)="updateItems()">Update First 5</button>
+    <button (click)="onRemoveSelected()">Remove Selected</button>
+    <button (click)="getRowData()">Get Row Data</button>
+  </div>
+  <div style="margin-top: 5px;">
+    <button (click)="clearData()">Clear Data</button> <button (click)="addItems()">Add Items</button>
+    <button (click)="addItemsAtIndex()">Add Items @ 2</button>
+  </div>
+</div>
+<div style="height: calc(100% - 60px);">
+  <ag-grid-angular
+    #agGrid
+    style="width: 100%; height: 100%;"
+    id="myGrid"
+    class="ag-theme-balham"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData"
+    [animateRows]="true"
+    [rowSelection]="rowSelection"
+    (gridReady)="onGridReady($event)"
+  ></ag-grid-angular>
+</div>
